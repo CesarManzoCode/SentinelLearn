@@ -20,3 +20,6 @@ class User:
     def add_weakness(self, weakness: str):
         if weakness not in self.weaknesses:
             self.weaknesses.append(weakness)
+
+    def get_level(self, topic: str) -> float:
+        return self.knowledge.get(topic, 0.0)
